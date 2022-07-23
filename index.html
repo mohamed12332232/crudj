@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>cruds</h2>
+            <p>product management system</p>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title">
+            <div id="price_container">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <!-- <input type="number" id="discount" placeholder="discount"> -->
+                <small id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="count" >
+            <input type="text" id="category" placeholder="category" >
+            <button id="submit" class="button">create</button>
+        </div>
+        <div class="outputs">
+            <div class="searchBlock">
+
+                <input onkeyup="search_products(this.value)"  type="text" id="search" placeholder="search">
+                <div class="btnSearch">
+                    <button onclick="get_search_mode(this.id)" id="seacrh_title" class="button">
+                        search by title
+
+                    </button>
+
+                    <button onclick="get_search_mode(this.id)" id="seacrh_category" class="button">
+                        search by category
+
+                    </button>
+
+                </div>
+            </div>
+
+
+            <div id="deleteAll">
+
+            </div>
+            <!-- start table -->
+            <table>
+                <!-- s first row -->
+                <tr>
+                    <th>
+                        id
+                    </th>
+                    <th>
+                        title
+                    </th>
+                    <th> price </th>
+                    <th>taxes </th>
+                    <th> ads </th>
+                    <th> discount</th>
+                    <th> total </th>
+                    <th> category</th>
+                    <th> uptade </th>
+                    <th> delete </th>
+                </tr>
+                <!-- e first row -->
+
+                <tbody id="tbody">
+
+                    <!-- <tr> -->
+                        <!-- <td>1</td>
+                        <td>samsug</td>
+                        <td>2000</td>
+                        <td>1000</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>2100</td>
+                        <td>phone</td>
+                        <td><button id="upate" class="button">upate</button></td>
+                        <td><button id="delete" class="button">delete</button></td> -->
+                    <!-- </tr> -->
+                   <!-- <tr> 
+                         <td>1</td>
+                        <td>samsug</td>
+                        <td>2000</td>
+                        <td>1000</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>2100</td>
+                        <td>phone</td>
+                        <td><button id="update" class="button">upate</button></td>
+                        <td><button id="delete" class="button">delete</button></td> 
+                     </tr>  -->
+
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>samsug</td>
+                        <td>2000</td>
+                        <td>1000</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>2100</td>
+                        <td>phone</td>
+                        <td><button id="upate" class="button">upate</button></td>
+                        <td><button id="delete" class="button">delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>samsug</td>
+                        <td>2000</td>
+                        <td>1000</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>2100</td>
+                        <td>phone</td>
+                        <td><button id="upate" class="button">upate</button></td>
+                        <td><button id="delete" class="button">delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>samsug</td>
+                        <td>2000</td>
+                        <td>1000</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>2100</td>
+                        <td>phone</td>
+                        <td><button id="upate" class="button">upate</button></td>
+                        <td><button id="delete" class="button">delete</button></td>
+                    </tr> -->
+                </tbody>
+
+            </table>
+            <!-- end table -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    --bgColor1: #222;
+    --color1: rgba(255, 255, 255, 0.411);
+
+    /*input coloring variadles*/ 
+
+    /* --input-color: #111; */
+    --input-bg-color: #111;
+    --input-color-foucs: #000;
+}
+
+/* 
+@media  {
+    
+input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: var(--input-bg-color);
+
+    margin: 4px 0px;
+    border-radius: 4px;
+    padding: 4px; 
+    color: var(--color1);
+}
+
+input:focus{
+    background: var(--input-color-foucs);
+    transform: scale(1.1) ;
+}
+
+} */
